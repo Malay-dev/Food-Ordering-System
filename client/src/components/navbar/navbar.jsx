@@ -18,8 +18,6 @@ import Button from "@mui/material/Button";
 import HomeSection from "../home//home/home.jsx";
 
 const drawerWidth = 240;
-{/*Menu items name here */}
-const navItems = ["Home","About","Features", "Feedback" ];
 
 function DrawerAppBar(props) {
   const { window } = props;
@@ -37,15 +35,16 @@ function DrawerAppBar(props) {
       </Typography>
       <Divider />
       <List sx={{fontWeight:"bold"}}>
-        {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
+        {props.navItems.map((item) => (
+          <ListItem key={item} disablePadding sx={{fontWeight:"bold!important"}}>
             <ListItemButton
               sx={{ textAlign: "center", position: "relative", left: "10",fontWeight:"bold!important"}}
             >
-              <ListItemText primary={item} sx={{fontWeight:"bold"}} />
+              <ListItemText primary={item} sx={{fontWeight:"bold!important"}} />
             </ListItemButton>
           </ListItem>
         ))}
+
       </List>
     </Box>
   );
@@ -75,13 +74,16 @@ function DrawerAppBar(props) {
             VFOOD
           </Typography>
           {/*Menu list names here */}
-          <Box sx={{ marginRight:5,display: { xs: "none", sm: "block"}}}>
-            {navItems.map((item) => (
+          <Box sx={{ marginRight:"4rem",display: { xs: "none", sm: "block"}}}>
+
+            {props.navItems.map((item) => (
               <Button key={item} sx={{color:"#000000!important",marginLeft:5,fontWeight:"bold"}}>
                 {item}
               </Button>
             ))}
           </Box>
+          {/*Search box component here*/}
+            {props.searchBox}
         </Toolbar>
       </AppBar>
       <Box component="nav">
@@ -99,7 +101,7 @@ function DrawerAppBar(props) {
               boxSizing: "border-box",
               width: drawerWidth,
             }
-          ,fontWeight:"bold"}}
+          ,fontWeight:"bold!important"}}
         >
           {drawer}
         </Drawer>
@@ -107,8 +109,8 @@ function DrawerAppBar(props) {
       <Box component="main" sx={{backgroundColor:"#04AFB6",height:"150vh",width:{lg:"100vw"}}}>
         <Toolbar />
         {/*Body of page*/}
-        <Typography sx={{marginTop:2.5,marginRight:1.5,marginLeft:1.5}}>
-          <HomeSection />
+        <Typography sx={{marginRight:0,marginLeft:0,marginTop:3}}>
+          {props.content}
         </Typography>
       </Box>
     </Box>
