@@ -1,6 +1,6 @@
 import React from "react";
 import { Typography } from "@mui/material";
-import { Box, Grid } from "@mui/material";
+import { Box, Grid, Button } from "@mui/material";
 import popular from "./popular";
 function PopularCategories() {
   return (
@@ -29,7 +29,7 @@ function PopularCategories() {
           {popular.map((item, index) => {
             return (
               <Grid item key={index}>
-                <div key={index}>{item.Svg}</div>
+                <Button key={index}>{item.Svg}</Button>
               </Grid>
             );
           })}
