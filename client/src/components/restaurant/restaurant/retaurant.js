@@ -14,6 +14,18 @@ const restaurant_array = [
     image: GymKhana,
   },
   {
+    title: "Gazebo",
+    rating: "4.8",
+    avg_time: "30 mins",
+    image: GymKhana,
+  },
+  {
+    title: "Gazebo",
+    rating: "4.8",
+    avg_time: "30 mins",
+    image: GymKhana,
+  },
+  {
     title: "Gazebo 2",
     rating: "4.8",
     avg_time: "30 mins",

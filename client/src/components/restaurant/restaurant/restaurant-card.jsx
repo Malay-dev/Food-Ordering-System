@@ -3,8 +3,7 @@ import { Box, Typography } from "@mui/material";
 import Color from "color";
 import { CardActionArea, Card, CardContent, CardMedia } from "@mui/material";
 import { makeStyles } from "@mui/styles";
-import { Stack, width } from "@mui/system";
-const Gymkhana = require("../assets/GymKhana.png");
+
 const useStyles = makeStyles(() => ({
   actionArea: {
     borderRadius: "16px !important",
@@ -14,7 +13,7 @@ const useStyles = makeStyles(() => ({
     },
   },
   card: {
-    minWidth: "256px !important",
+    maxWidth: "300px !important",
     borderRadius: "16px !important",
     boxShadow: "none",
     "&:hover": {
@@ -34,6 +33,7 @@ const useStyles = makeStyles(() => ({
   title: {
     fontSize: "2rem !important",
     color: "#000 !important",
+    paddingBottom: "5px!important",
   },
   subtitle: {
     color: "#000",
@@ -46,12 +46,12 @@ const useStyles = makeStyles(() => ({
     display: "flex !important",
     objectFit: "cover !important",
     height: "100%!important",
+    borderRadius: "16px !important",
   },
   dot: {
     width: "8px",
-    height: " 8px",
+    height: "8px",
     background: "#FFFFFF",
-
     borderRadius: "50%",
   },
 }));
@@ -84,7 +84,7 @@ function RestaurantCard({ image, title, rating, avg_time }) {
                 fontWeight="700">
                 ⭐ {rating}
               </Typography>
-              <Box className={styles.dot}>.</Box>
+              <span className={styles.dot}>.</span>
               <Typography
                 className={styles.subtitle}
                 fontFamily="Raleway, sans-serif"

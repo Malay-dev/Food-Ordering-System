@@ -1,6 +1,6 @@
 import React from "react";
 import { Typography } from "@mui/material";
-import { Box } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 import popular from "./popular";
 function PopularCategories() {
   return (
@@ -14,15 +14,26 @@ function PopularCategories() {
         Popular Categories
       </Typography>
       <Box
+        sx={{ flexGrow: 1 }}
         mx={5}
         my={2}
         style={{
-          display: "flex",
+          display: "grid",
+          flexDirection: "row",
           gap: "15px",
         }}>
-        {popular.map((item, index) => {
-          return <div key={index}>{item.Svg}</div>;
-        })}
+        <Grid
+          container
+          spacing={{ xs: 2, sm: 2, md: 3 }}
+          columns={{ xs: 2, sm: 3, md: 6 }}>
+          {popular.map((item, index) => {
+            return (
+              <Grid item key={index}>
+                <div key={index}>{item.Svg}</div>
+              </Grid>
+            );
+          })}
+        </Grid>
       </Box>
     </Box>
   );

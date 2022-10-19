@@ -1,11 +1,11 @@
 import React from "react";
-import { Stack, Typography, Divider } from "@mui/material";
+import { Typography, Grid } from "@mui/material";
 import { Box, Button } from "@mui/material";
 import RestaurantCard from "./restaurant-card";
 import restaurant_array from "./retaurant";
 function Restaurants() {
   return (
-    <Box>
+    <Box style={{ overflow: "hidden" }}>
       <Typography
         variant="h3"
         mx={5}
@@ -14,12 +14,12 @@ function Restaurants() {
         color="#fff">
         Restaurants
       </Typography>
-      <Stack
+      <Grid
+        container
         mx={5}
         my={3}
-        direction="row"
-        divider={<Divider orientation="vertical" flexItem />}
-        spacing={2}>
+        columns={{ xs: 1, sm: 2, md: 4, lg: 4 }}
+        spacing={3}>
         {restaurant_array.map((item, index) => {
           return (
             <Button key={index}>
@@ -31,7 +31,7 @@ function Restaurants() {
             </Button>
           );
         })}
-      </Stack>
+      </Grid>
     </Box>
   );
 }
