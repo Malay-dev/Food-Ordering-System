@@ -19,7 +19,7 @@ export default function FullWidthGrid(props) {
           <Item sx={{backgroundColor:"#04AFB6",boxShadow:"none"}}>{props.one}</Item>
         </Grid>
         <Grid item xs={12} md={6} lg={6}>
-          <Item sx={{backgroundColor:"#04AFB6",boxShadow:"none"}}>{props.two}</Item>
+          <Item sx={{backgroundColor:"#04AFB6",boxShadow:"none",marginBottom:"1rem"}}>{props.two}</Item>
         </Grid>
       </Grid>
     </Box>

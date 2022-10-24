@@ -7,7 +7,7 @@ function HomeSection()
 {
   return(
     <div>
-      <Grid one=<Title/> two=<Illustration/>/>
+      <Grid  one=<Title/> two=<Illustration/>/>
     </div>
   )
 };

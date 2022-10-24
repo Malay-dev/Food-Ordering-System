@@ -13,7 +13,11 @@ function RestaurantList() {
         searchBox={<SearchBox />}
         navItems={menu.loggedInMenuItems}
         content={<Restaurant />}
-        bg={"#393939"}></Drawer>
+        bg={"#393939"}
+        drawerColor={"#393939"}
+        menuItemColor={"#ffffff"}>
+        </Drawer>
+
     </div>
   );
 }

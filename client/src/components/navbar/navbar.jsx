@@ -32,13 +32,15 @@ function DrawerAppBar(props) {
       onClick={handleDrawerToggle}
       sx={{
         textAlign: "center",
-        backgroundColor: "#04AFB6",
+        backgroundColor:props.drawerColor,
         height: "150vh",
         fontWeight: "bold",
+        color:props.menuItemColor,
+        fontWeight:"boldimportant!"
       }}>
       {/*Logo Name*/}
       <Typography variant="h6" sx={{ my: 4, color: "#ffffff" }}>
-        VFOOD
+        <img src="../../../assets/logo.png"/>
       </Typography>
       <Divider />
       <List sx={{ fontWeight: "bold" }}>
@@ -69,7 +71,7 @@ function DrawerAppBar(props) {
     window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box sx={{ display: "flex"}}>
       <AppBar
         component="nav"
         sx={{
@@ -90,7 +92,7 @@ function DrawerAppBar(props) {
             variant="h6"
             component="div"
             sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}>
-            VFOOD
+            <img src="../../../assets/logo.png"/>
           </Typography>
           {/*Menu list names here */}
           <Box
@@ -99,7 +101,7 @@ function DrawerAppBar(props) {
               <Button
                 key={item}
                 sx={{
-                  color: "#000000!important",
+                  color: props.menuItemColor,
                   marginLeft: 5,
                   fontWeight: "bold",
                 }}>
@@ -135,8 +137,8 @@ function DrawerAppBar(props) {
         component="main"
         sx={{
           backgroundColor: props.bg ? props.bg : "#04AFB6",
-          height: "150vh",
           width: { lg: "100vw" },
+
         }}>
         <Toolbar />
         {/*Body of page*/}

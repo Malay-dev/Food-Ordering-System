@@ -8,7 +8,7 @@ import * as menu from "../navbar/menu-items.jsx";
 function Home(){
   return(
     <div>
-    <Navbar content={<HomeSection/>} searchBox={null} navItems={menu.homeMenuItems}>
+    <Navbar content={<HomeSection/>} searchBox={null} navItems={menu.homeMenuItems} drawerColor={"#04AFB6"} menuItemColor={"#000000"}>
     </Navbar>
     </div>
   )
