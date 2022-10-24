@@ -13,23 +13,17 @@ function PopularCategories() {
         color="#fff">
         Popular Categories
       </Typography>
-      <Box
-        sx={{ flexGrow: 1 }}
-        mx={5}
-        my={2}
-        style={{
-          display: "grid",
-          flexDirection: "row",
-          gap: "15px",
-        }}>
+      <Box sx={{ flexGrow: 1 }} mx={5} my={2}>
         <Grid
           container
-          spacing={{ xs: 2, sm: 2, md: 2 }}
+          spacing={{ xs: 1, sm: 2, md: 2 }}
           columns={{ xs: 2, sm: 3, md: 6 }}>
           {popular.map((item, index) => {
             return (
               <Grid item key={index}>
-                <Button key={index}>{item.Svg}</Button>
+                <Button key={index} sx={{ padding: 0 }}>
+                  {item.Svg}
+                </Button>
               </Grid>
             );
           })}

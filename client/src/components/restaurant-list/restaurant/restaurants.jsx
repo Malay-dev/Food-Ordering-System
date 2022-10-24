@@ -26,6 +26,7 @@ function Restaurants() {
               key={index}
               sx={{
                 margin: 1,
+                marginTop: "1 !important",
               }}>
               <RestaurantCard
                 key={index}
