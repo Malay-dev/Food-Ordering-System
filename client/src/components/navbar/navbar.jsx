@@ -72,7 +72,10 @@ function DrawerAppBar(props) {
     <Box sx={{ display: "flex" }}>
       <AppBar
         component="nav"
-        sx={{ backgroundColor: props.bg ? props.bg : "#04AFB6", boxShadow: "none" }}>
+        sx={{
+          backgroundColor: props.bg ? props.bg : "#04AFB6",
+          boxShadow: "none",
+        }}>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -137,9 +140,15 @@ function DrawerAppBar(props) {
         }}>
         <Toolbar />
         {/*Body of page*/}
-        <Typography sx={{ marginRight: 0, marginLeft: 0, marginTop: 3 }}>
+        <Box
+          sx={{
+            marginRight: 0,
+            marginLeft: 0,
+            marginTop: 3,
+            backgroundColor: props.bg,
+          }}>
           {props.content}
-        </Typography>
+        </Box>
       </Box>
     </Box>
   );

@@ -16,14 +16,20 @@ function Restaurants() {
       </Typography>
       <Grid
         container
-        mx={5}
-        my={3}
-        columns={{ xs: 1, sm: 2, md: 4, lg: 4 }}
-        spacing={3}>
+        mx={4}
+        my={2}
+        columns={{ xs: 1, sm: 2, md: 3, lg: 3 }}
+        spacing={1}>
         {restaurant_array.map((item, index) => {
           return (
-            <Button key={index}>
+            <Button
+              key={index}
+              sx={{
+                margin: 1,
+              }}>
               <RestaurantCard
+                key={index}
+                item
                 title={item.title}
                 image={item.image}
                 rating={item.rating}

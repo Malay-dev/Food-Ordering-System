@@ -24,7 +24,7 @@ function PopularCategories() {
         }}>
         <Grid
           container
-          spacing={{ xs: 2, sm: 2, md: 3 }}
+          spacing={{ xs: 2, sm: 2, md: 2 }}
           columns={{ xs: 2, sm: 3, md: 6 }}>
           {popular.map((item, index) => {
             return (
