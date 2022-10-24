@@ -4,7 +4,7 @@ import Drawer from "../navbar/navbar.jsx";
 //custom component
 import SearchBox from "../navbar/search-box.jsx";
 import * as menu from "../navbar/menu-items.jsx";
-import Restaurant from "../restaurant/restaurant.jsx";
+import Restaurant from "../restaurant-list/restaurant-list.jsx";
 
 function RestaurantList() {
   return (
