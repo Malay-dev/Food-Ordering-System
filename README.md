@@ -7,3 +7,6 @@
   Step 4: Order Confirmation: "/order-confirmation" <br/>
   Step 5: Payment Link: "/payment-link" <br/>
   Step 6: Food Status: "/food-status" <br/>
+  Other Paths:<br/>
+  User Profile: "/user-profile"<br/>
+  Edit User Profile: "/user-profile-edit"<br/>
