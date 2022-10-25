@@ -35,7 +35,7 @@ function DrawerAppBar(props) {
         backgroundColor:props.drawerColor,
         height: "150vh",
         fontWeight: "bold",
-        color:props.menuItemColor,
+        color:props.menuItemColorDrawer,
         fontWeight:"boldimportant!"
       }}>
       {/*Logo Name*/}
@@ -101,7 +101,7 @@ function DrawerAppBar(props) {
               <Button
                 key={item}
                 sx={{
-                  color: props.menuItemColor,
+                  color: props.menuItemColorMain,
                   marginLeft: 5,
                   fontWeight: "bold",
                 }}>
@@ -137,7 +137,7 @@ function DrawerAppBar(props) {
         component="main"
         sx={{
           backgroundColor: props.bg ? props.bg : "#04AFB6",
-          width: { lg: "100vw" },
+          width: { lg: "100vw" ,md:"100vw",sm:"100vw",xs:"100vw"},
 
         }}>
         <Toolbar />

@@ -15,7 +15,8 @@ function RestaurantList() {
         content={<Restaurant />}
         bg={"#393939"}
         drawerColor={"#393939"}
-        menuItemColor={"#ffffff"}>
+        menuItemColorMain={"#ffffff"}
+        menuItemColorDrawer={"#ffffff"}>
         </Drawer>
 
     </div>
